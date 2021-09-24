@@ -8,17 +8,21 @@ public class AddressBook {
     }
 
     public void addBuddy(BuddyInfo bi){
-        addressBook.add(bi);
+        if (bi != null){
+            addressBook.add(bi);
+        }
     }
 
-    public void removeBuddy(BuddyInfo bi){
-        addressBook.remove(bi);
+    public void removeBuddy(int index){
+        if (index >= 0 && index < addressBook.size()){
+            addressBook.remove(index);
+        }
     }
 
     public static void main(String[] args) {
         BuddyInfo buddy = new BuddyInfo("tom", "carleton", "613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.removeBuddy(buddy);
+        addressBook.removeBuddy(0);
     }
 }
