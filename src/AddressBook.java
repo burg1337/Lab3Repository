@@ -19,6 +19,10 @@ public class AddressBook {
         }
     }
 
+    public void newMethodForBranch(){
+        System.out.println("yo yo new branch");
+    }
+
     public static void main(String[] args) {
         BuddyInfo buddy = new BuddyInfo("tom", "carleton", "613");
         AddressBook addressBook = new AddressBook();
